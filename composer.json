@@ -1,0 +1,25 @@
+{
+    "name": "mrkwp/mrk-search-exclude",
+    "description": "Search Exclude Plugin by MRK WP",
+    "type": "project",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "MRK WP",
+            "email": "helpdesk@mrkwp.com"
+        }
+    ],
+    "config": {
+        "vendor-dir": "lib",
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    },
+    "require": {
+        "composer/installers": "^1",
+        "htmlburger/carbon-fields": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {"MRK_Search_Exclude\\": "./core"}
+    }
+}
