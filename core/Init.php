@@ -19,6 +19,9 @@ final class Init {
 	public static function get_services() {
 		return array(
 			Admin\Options::class,
+			Admin\BulkEdit::class,
+			Admin\Columns::class,
+			Admin\Metabox::class,
 		);
 	}
 

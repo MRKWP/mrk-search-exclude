@@ -2,13 +2,13 @@
 /**
  * Plugin Name:     MRK Search Exclude
  * Plugin URI:      https://www.mrkwp.com
- * Description:     MRK Search Exclude by MRK WP
+ * Description:     MRK Search Exclude by MRK WP cloned from Search Exclude Plugin by By QuadLayers
  * Author:          MRK WP
  * Author URI:      https://www.mrkwp.com
  * Text Domain:     mrk-search-exclude
  * Domain Path:     /languages
- * Version:         1.0.0
- * PHP version:     8.1
+ * Version:         1.0.2
+ * PHP version:     8.
  *
  * @category Plugin
  * @package  MRK_Search_Exclude
@@ -20,22 +20,15 @@
 // If this file is called firectly, abort!!!
 defined( 'ABSPATH' ) or die( 'No Access!' );
 
-define( 'MRK_SEARCH_EXCLUDE_PLUGIN_VERSION', '1.0.0' );
+define( 'MRK_SEARCH_EXCLUDE_PLUGIN_VERSION', '1.0.2' );
+
+define( 'MRK_SEARCH_EXCLUDE_PLUGIN_FILE', __FILE__ );
+define( 'MRK_SEARCH_EXCLUDE_PLUGIN_DIR', __DIR__ . DIRECTORY_SEPARATOR );
 
 // Require once the Composer Autoload.
 if ( file_exists( __DIR__ . '/lib/autoload.php' ) ) {
 	include_once __DIR__ . '/lib/autoload.php';
 }
-
-/**
- * Added the CRB loader here and linked to a base class to avoid name space issues.
- *
- * @return void
- */
-function load_mrk_search_exclude_crb() {
-	MRK_Search_Exclude\Base\CrbLoader::load();
-}
-add_action( 'after_setup_theme', 'load_mrk_search_exclude_crb' );
 
 /**
  * The code that runs during plugin activation.
