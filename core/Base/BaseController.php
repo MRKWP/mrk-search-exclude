@@ -223,8 +223,7 @@ class BaseController {
 	public function search_filter( $query ) {
 		$exclude =
 		( ! is_admin() || ( defined( 'DOING_AJAX' ) && DOING_AJAX ) )
-		&& $query->is_search
-		&& ! $this->is_bbpress( $query );
+		&& $query->is_search;
 
 		$exclude = apply_filters( 'searchexclude_filter_search', $exclude, $query );
 
