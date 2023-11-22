@@ -14,7 +14,6 @@ class ComposerStaticInit4ba916dd8914a4e2b2622624906b1ad8
         'C' => 
         array (
             'Composer\\Installers\\' => 20,
-            'Carbon_Fields\\' => 14,
         ),
     );
 
@@ -26,10 +25,6 @@ class ComposerStaticInit4ba916dd8914a4e2b2622624906b1ad8
         'Composer\\Installers\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
-        ),
-        'Carbon_Fields\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/htmlburger/carbon-fields/core',
         ),
     );
 

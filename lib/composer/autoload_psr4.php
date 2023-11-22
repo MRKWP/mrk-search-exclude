@@ -8,5 +8,4 @@ $baseDir = dirname($vendorDir);
 return array(
     'MRK_Search_Exclude\\' => array($baseDir . '/core'),
     'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),
-    'Carbon_Fields\\' => array($vendorDir . '/htmlburger/carbon-fields/core'),
 );

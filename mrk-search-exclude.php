@@ -7,7 +7,7 @@
  * Author URI:      https://www.mrkwp.com
  * Text Domain:     mrk-search-exclude
  * Domain Path:     /languages
- * Version:         1.0.0
+ * Version:         1.0.1
  * PHP version:     8.1
  *
  * @category Plugin
@@ -20,22 +20,12 @@
 // If this file is called firectly, abort!!!
 defined( 'ABSPATH' ) or die( 'No Access!' );
 
-define( 'MRK_SEARCH_EXCLUDE_PLUGIN_VERSION', '1.0.0' );
+define( 'MRK_SEARCH_EXCLUDE_PLUGIN_VERSION', '1.0.1' );
 
 // Require once the Composer Autoload.
 if ( file_exists( __DIR__ . '/lib/autoload.php' ) ) {
 	include_once __DIR__ . '/lib/autoload.php';
 }
-
-/**
- * Added the CRB loader here and linked to a base class to avoid name space issues.
- *
- * @return void
- */
-function load_mrk_search_exclude_crb() {
-	MRK_Search_Exclude\Base\CrbLoader::load();
-}
-add_action( 'after_setup_theme', 'load_mrk_search_exclude_crb' );
 
 /**
  * The code that runs during plugin activation.
