@@ -50,6 +50,11 @@ class BaseController {
 		$this->plugin_path = plugin_dir_path( dirname( __DIR__, 1 ) );
 		$this->plugin_url  = plugin_dir_url( dirname( __DIR__, 1 ) );
 		$this->plugin      = plugin_basename( dirname( __DIR__, 2 ) ) . '/mrk-search-exclude.php';
+
+		add_action( 'admin_print_scripts-edit.php', array( $this, 'enqueue_scripts' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_style' ) );
+
+		add_filter( 'pre_get_posts', array( $this, 'search_filter' ) );
 	}
 
 	/**
@@ -207,5 +212,26 @@ class BaseController {
 				)
 			);
 		}
+	}
+
+	/**
+	 * Update the search to have filtered items in the search or removed.
+	 *
+	 * @param [type] $query search query.
+	 * @return $query adjusted search query.
+	 */
+	public function search_filter( $query ) {
+		$exclude =
+		( ! is_admin() || ( defined( 'DOING_AJAX' ) && DOING_AJAX ) )
+		&& $query->is_search
+		&& ! $this->is_bbpress( $query );
+
+		$exclude = apply_filters( 'searchexclude_filter_search', $exclude, $query );
+
+		if ( $exclude ) {
+			$query->set( 'post__not_in', array_merge( array(), $this->get_excluded() ) );
+		}
+
+		return $query;
 	}
 }

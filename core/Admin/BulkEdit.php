@@ -27,6 +27,8 @@ class BulkEdit extends BaseController {
 			add_filter( "bulk_actions-edit-$post_type", array( $this, 'bulk_edit' ) );
 			add_filter( "handle_bulk_actions-edit-$post_type", array( $this, 'bulk_action_handler' ), 10, 3 );
 		}
+
+		add_action( 'admin_notices', array( $this, 'bulk_action_notices' ) );
 	}
 
 	/**
