@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     MRK Search Exclude
  * Plugin URI:      https://www.mrkwp.com
- * Description:     MRK Search Exclude by MRK WP cloned from Search Exclude Plugin by By QuadLayers
+ * Description:     MRK Search Exclude cloned from Search Exclude Plugin by QuadLayers
  * Author:          MRK WP
  * Author URI:      https://www.mrkwp.com
  * Text Domain:     mrk-search-exclude
