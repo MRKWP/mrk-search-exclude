@@ -156,7 +156,7 @@ class BaseController {
 	 * @param [type] $post_ids array of post IDs.
 	 * @return array filtered array of post ids.
 	 */
-	private function filter_posts_ids( $post_ids ) {
+	public function filter_posts_ids( $post_ids ) {
 		return array_filter( filter_var( $post_ids, FILTER_VALIDATE_INT, FILTER_FORCE_ARRAY ) );
 	}
 
@@ -200,7 +200,7 @@ class BaseController {
 	 *
 	 * @return void
 	 */
-	private function check_permissions() {
+	public function check_permissions() {
 		$capability = apply_filters( 'searchexclude_filter_permissions', 'edit_others_pages' );
 		if ( ! current_user_can( $capability ) ) {
 			wp_die(
