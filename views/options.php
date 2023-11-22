@@ -5,7 +5,7 @@
 
 ?>
 <div class="wrap">
-		<h2>Search Exclude</h2>
+		<h2>MRK Search Exclude</h2>
 		<?php if ( empty( $excluded ) ) : ?>
 			<p><?php esc_html_e( 'No items excluded from the search results yet.', 'search-exclude' ); ?></p>
 		<?php else : ?>

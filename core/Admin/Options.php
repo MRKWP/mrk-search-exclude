@@ -32,8 +32,8 @@ class Options extends BaseController {
 	 */
 	public function admin_menu() {
 		add_options_page(
-			'Search Exclude',
-			'Search Exclude',
+			'MRK Search Exclude',
+			'MRK Search Exclude',
 			'manage_options',
 			'search_exclude',
 			array( $this, 'options' )
