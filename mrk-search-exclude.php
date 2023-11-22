@@ -22,6 +22,9 @@ defined( 'ABSPATH' ) or die( 'No Access!' );
 
 define( 'MRK_SEARCH_EXCLUDE_PLUGIN_VERSION', '1.0.1' );
 
+define( 'MRK_SEARCH_EXCLUDE_PLUGIN_FILE', __FILE__ );
+define( 'MRK_SEARCH_EXCLUDE_PLUGIN_DIR', __DIR__ . DIRECTORY_SEPARATOR );
+
 // Require once the Composer Autoload.
 if ( file_exists( __DIR__ . '/lib/autoload.php' ) ) {
 	include_once __DIR__ . '/lib/autoload.php';

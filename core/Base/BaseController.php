@@ -115,8 +115,8 @@ class BaseController {
 	protected function view( $view, $params = array() ) {
 		// phpcs:ignore
 		extract( $params );
-		if ( file_exists( __DIR__ . '/views/' . $view . '.php' ) ) {
-			include __DIR__ . '/views/' . $view . '.php';
+		if ( file_exists( MRK_SEARCH_EXCLUDE_PLUGIN_DIR . 'views/' . $view . '.php' ) ) {
+			include MRK_SEARCH_EXCLUDE_PLUGIN_DIR . 'views/' . $view . '.php';
 		}
 	}
 
@@ -167,11 +167,11 @@ class BaseController {
 	 */
 	public function enqueue_scripts() {
 
-		$backend = include QLSE_PLUGIN_DIR . 'build/backend/js/index.asset.php';
+		$backend = include MRK_SEARCH_EXCLUDE_PLUGIN_DIR . 'build/backend/js/index.asset.php';
 
 		wp_enqueue_script(
 			'search-exclude-backend',
-			plugins_url( '/build/backend/js/index.js', QLSE_PLUGIN_FILE ),
+			plugins_url( '/build/backend/js/index.js', MRK_SEARCH_EXCLUDE_PLUGIN_FILE ),
 			array_merge(
 				$backend['dependencies'],
 				array( 'inline-edit-post' )
@@ -189,9 +189,9 @@ class BaseController {
 	public function enqueue_style() {
 		wp_enqueue_style(
 			'search-exclude-backend',
-			plugins_url( '/build/backend/css/style.css', QLSE_PLUGIN_FILE ),
+			plugins_url( '/build/backend/css/style.css', MRK_SEARCH_EXCLUDE_PLUGIN_FILE ),
 			array(),
-			QLSE_PLUGIN_VERSION
+			MRK_SEARCH_EXCLUDE_PLUGIN_VERSION
 		);
 	}
 
