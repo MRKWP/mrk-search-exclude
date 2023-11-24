@@ -13,7 +13,11 @@ We therefore decided to clone their solution and re-develop it removing all the 
 
 ## Guides and Screencast
 
-[Blog Guide](https://www.mrkwp.com/2023/11/exclude-post-wordpress-search/)
+Read the article on MRKWP.com with a full detailed guide on how this plugin works.
+
+[How to Exclude Pages and Posts from WordPress Search](https://www.mrkwp.com/2023/11/exclude-post-wordpress-search/)
+
+You can go direct to youtube to watch the screencast and original release information.
 
 [![Youtube Video Guide](https://i.ytimg.com/vi/4bt3qcT2_b4/maxresdefault.jpg)](https://www.youtube.com/watch?v=4bt3qcT2_b4 "How to hide specific pages or posts from search in WordPress - Free Plugin")
 
