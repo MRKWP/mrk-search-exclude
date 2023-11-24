@@ -11,11 +11,11 @@ The MRK Search Exclude Plugin was cloned from the Search Exclude plugin by QuadL
 
 We therefore decided to clone their solution and re-develop it removing all the bloatware from their current plugin.
 
-## Guide and Youtube Tutorial
+## Guides and Screencast
 
-[link url="https://www.mrkwp.com/2023/11/exclude-post-wordpress-search/"]https://www.mrkwp.com/2023/11/exclude-post-wordpress-search/[/link]
+[![Blog Guide](https://www.mrkwp.com/2023/11/exclude-post-wordpress-search/)]
 
-[![Youtube Video Guide](https://i.ytimg.com/vi/4bt3qcT2_b4/maxresdefault.jpg)](https://www.youtube.com/watch?v=4bt3qcT2_b4 "How to hide specific pages or posts from search in WordPress - Free Plugin")
+[![Youtube Video Guide](https://i.ytimg.com/vi/4bt3qcT2_b4/maxresdefault.jpg)](https://www.youtube.com/watch?v=4bt3qcT2_b4 "How to hide specific pages or posts from search in WordPress - Free Plugin")]
 
 
 ## Changelog
